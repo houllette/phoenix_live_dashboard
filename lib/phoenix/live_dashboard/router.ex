@@ -366,7 +366,8 @@ defmodule Phoenix.LiveDashboard.Router do
         ports: {Phoenix.LiveDashboard.PortsPage, %{}},
         sockets: {Phoenix.LiveDashboard.SocketsPage, %{}},
         ets: {Phoenix.LiveDashboard.EtsPage, %{}},
-        ecto_stats: {Phoenix.LiveDashboard.EctoStatsPage, ecto_session}
+        ecto_stats: {Phoenix.LiveDashboard.EctoStatsPage, ecto_session},
+        security: {Phoenix.LiveDashboard.SecurityPage, %{}}
       )
       |> Enum.concat(additional_pages)
       |> Enum.map(fn {key, {module, opts}} ->

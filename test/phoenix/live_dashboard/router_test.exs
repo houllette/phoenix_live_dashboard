@@ -303,7 +303,8 @@ defmodule Phoenix.LiveDashboard.RouterTest do
                         {:ecto_psql_extras_options, []},
                         {:ecto_mysql_extras_options, []}
                       ]
-                    }}
+                    }},
+                 security: {Phoenix.LiveDashboard.SecurityPage, %{}}
                ],
                "requirements" => [{:application, :os_mon}]
              } = csp_session(build_conn())
